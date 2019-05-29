@@ -14,18 +14,47 @@ options(width=120)
 
 # delphiepidata
 
+Query the 'CMU' 'DELPHI' Epidemiological Data 'API'
+
 ## Description
+
+The 'CMU' 'DELPHI' (<https://delphi.midas.cs.cmu.edu/>) service provides an aggregated, central point of access to influenza-like illness ('ILI') related data sources. Methods are provided to query all supported endpoints.
+
+- DELPHI API docs: <https://github.com/cmu-delphi/delphi-epidata>
+- DELPHI: <https://delphi.midas.cs.cmu.edu/>
+- URL: <https://gitlab.com/hrbrmstr/delphiepidata>
+- BugReports: <https://gitlab.com/hrbrmstr/delphiepidata/issues>
 
 ## What's Inside The Tin
 
 The following functions are implemented:
+
+- `cdc`:	Fetch CDC page hits
+- `delphi`:	Fetch Delphi's forecast
+- `dengue_nowcast`:	Fetch Delphi's PAHO Dengue nowcast
+- `dengue_sensors`:	Fetch Delphi's digital surveillance sensors
+- `flusurv`:	Fetch FluSurv data
+- `fluview`:	Fetch FluView data
+- `fluview_clinical`:	Fetch FluView virological data
+- `gft`:	Fetch Google Flu Trends data
+- `ght`:	Fetch Google Health Trends data
+- `meta`:	Fetch API metadata
+- `meta_norostat`:	Fetch NoroSTAT metadata
+- `nidss_dengue`:	Fetch NIDSS dengue data
+- `nidss_flu`:	Fetch NIDSS flu data
+- `norostat`:	Fetch NoroSTAT data (point data, no min/max)
+- `nowcast`:	Fetch Delphi's wILI nowcast
+- `quidel`:	Fetch Quidel data
+- `sensors`:	Fetch Delphi's digital surveillance sensors
+- `twitter`:	Fetch HealthTweets data
+- `wiki`:	Fetch Wikipedia access data
 
 ## Installation
 
 ```{r install-ex, eval=FALSE}
 devtools::install_git("https://sr.ht.com/~hrbrmstr/delphiepidata.git")
 # or
-devtools::install_git("https://gitlab.com/hrbrmstr/delphiepidata.git")
+devtools::install_gitlab("hrbrmstr/delphiepidata")
 # or (if you must)
 devtools::install_github("hrbrmstr/delphiepidata")
 ```
